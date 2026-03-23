@@ -20,19 +20,38 @@ struct ContentView: View {
             }
             
             HStack{
-                Button(action: {
-                    emojiCount -= 1
-                }, label: {
+//                Button(action: {
+//                    if emojiCount > 1{
+//                        emojiCount -= 1
+//                    }
+//                }, label: {
+//                    Text("Remove Card")
+//                })
+                Button{
+                    if emojiCount > 1{
+                        emojiCount -= 1
+                    }
+                }label: {
                     Text("Remove Card")
-                })
+                }
+                
                 
                 Spacer()
                 
-                Button(action: {
-                    emojiCount += 1
-                }, label: {
+//                Button(action: {
+//                    if emojiCount < emojis.count {
+//                        emojiCount += 1
+//                    }
+//                }, label: {
+//                    Text("Add Game")
+//                })
+                Button{
+                    if emojiCount < emojis.count {
+                        emojiCount += 1
+                    }
+                }label: {
                     Text("Add Game")
-                })
+                }
             }
             
         }
