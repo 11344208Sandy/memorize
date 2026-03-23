@@ -20,43 +20,47 @@ struct ContentView: View {
             }
             
             HStack{
-//                Button(action: {
-//                    if emojiCount > 1{
-//                        emojiCount -= 1
-//                    }
-//                }, label: {
-//                    Text("Remove Card")
-//                })
-                Button{
-                    if emojiCount > 1{
-                        emojiCount -= 1
-                    }
-                }label: {
-                    Text("Remove Card")
-                }
-                
-                
+                remove
                 Spacer()
-                
-//                Button(action: {
-//                    if emojiCount < emojis.count {
-//                        emojiCount += 1
-//                    }
-//                }, label: {
-//                    Text("Add Game")
-//                })
-                Button{
-                    if emojiCount < emojis.count {
-                        emojiCount += 1
-                    }
-                }label: {
-                    Text("Add Game")
-                }
+                add
             }
-            
+            .font(.largeTitle)
         }
         .padding()
         .foregroundStyle(.orange)
+    }
+    var remove: some View{
+        Button{
+            if emojiCount > 1{
+                emojiCount -= 1
+            }
+        }label: {
+            Image(systemName: "minus.circle")
+        }
+        //Button(action: {
+        //  if emojiCount > 1{
+        //      emojiCount -= 1
+        //  }
+        //}, label: {
+        //     Text("Remove Card")
+        //})
+    }
+    
+    var add: some View{
+        Button{
+            if emojiCount < emojis.count {
+                emojiCount += 1
+            }
+        }label: {
+            Image(systemName: "plus.circle")
+        }
+        //Button(action: {
+        //  if emojiCount < emojis.count {
+        //      emojiCount += 1
+        //  }
+        //}, label: {
+        //     Text("Add Game")
+        //})
     }
 }
 
