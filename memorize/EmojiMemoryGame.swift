@@ -26,7 +26,7 @@ class EmojiMemoryGame {
     //MARK: - intent
     
     func choose(_ card: MemoryGame<String>.Card) {
-        model.choose(card: card)
+        model.choose(card)
     }
     
     func shuffle() {

@@ -56,7 +56,7 @@ struct CardView: View {
              
              shape.opacity(card.isFaceUp ? 0 : 1)
          }
-         .opacity(card.isMatched && |)
+         .opacity(card.isMatched && !card.isFaceUp ? 0 : 1)
      }
  }
 

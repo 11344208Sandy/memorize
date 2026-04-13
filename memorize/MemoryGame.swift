@@ -29,7 +29,6 @@ struct MemoryGame<CardContent> where CardContent: Equatable{
                     cards[lastIndex].isMatched = true
                     cards[chosenIndex].isMatched = true
                 }
-            }
             lastFaceUpIndex = nil
         }else{
             for i in 0..<cards.count {
